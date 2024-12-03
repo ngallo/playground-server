@@ -1,7 +1,5 @@
 permit(
     principal in Role::"administer-platform-branches",
-    action in Action::"pharmacy-branch-management",
+    action in Action::"create",
     resource in Resource::"pharmacy-branch"
-) when {
-    principal.account == 345
-};
+);
