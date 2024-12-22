@@ -1,3 +1,4 @@
+@id("view-branch-inventory-auditor")
 permit(
 	principal in Permguard::Actor::"inventory-auditor",
 	action in Action::"view",
