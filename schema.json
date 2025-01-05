@@ -47,7 +47,11 @@
           "BranchInfo": {
               "shape": {
                   "type": "Record",
-                  "attributes": {}
+                  "attributes": {
+                      "active": {
+                          "type": "Boolean"
+                      }
+                  }
               },
               "memberOfTypes": []
           }
@@ -98,7 +102,16 @@
                   "resourceTypes": [
                       "BranchInfo",
                       "Branch"
-                  ]
+                  ],
+                  "context": {
+                      "type": "Record",
+                      "attributes": {
+                          "isSuperUser": {
+                              "type": "Boolean",
+                              "required": true
+                          }
+                      }
+                  }
               }
           }
       }
