@@ -1,10 +1,9 @@
 {
   "authorization_context": {
-    "application_id": 268786704340,
+    "application_id": 727373447775,
     "policy_store": {
       "type": "ledger",
-      "id": "magicfarmacia",
-      "version": "722164f552f2c8e582d4ef79270c7ec94b3633e8172af6ea53ffe1fdf64d66de"
+      "id": "c38dd73eee73491cbb023c29ab1acd8e"
     },
     "principal": {
       "type": "user",
