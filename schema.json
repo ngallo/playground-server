@@ -1,11 +1,43 @@
 {
-  "MagicFarmacia:Platform": {
+  "Permguard::IAM": {
+      "entityTypes": {
+          "User": {
+              "shape": {
+                  "type": "Record",
+                  "attributes": {}
+              },
+              "memberOfTypes": [
+                  "Identity"
+              ]
+          },
+          "Actor": {
+              "shape": {
+                  "type": "Record",
+                  "attributes": {}
+              },
+              "memberOfTypes": [
+                  "Identity"
+              ]
+          },
+          "Identity": {
+              "shape": {
+                  "type": "Record",
+                  "attributes": {}
+              },
+              "memberOfTypes": []
+          }
+      },
+      "actions": {}
+  },
+  "MagicFarmacia::Platform": {
       "entityTypes": {
           "Branch": {
               "shape": {
                   "type": "Record",
                   "attributes": {
-                      "city": "String"
+                      "city": {
+                          "type": "String"
+                      }
                   }
               },
               "memberOfTypes": [
@@ -15,17 +47,20 @@
           "BranchInfo": {
               "shape": {
                   "type": "Record",
-                  "attributes": null
-              }
+                  "attributes": {}
+              },
+              "memberOfTypes": []
           }
       },
       "actions": {
           "create": {
               "appliesTo": {
                   "principalTypes": [
-                      "Permguard::IAM"
+                      "Permguard::IAM::User",
+                      "Permguard::IAM::Actor"
                   ],
                   "resourceTypes": [
+                      "BranchInfo",
                       "Branch"
                   ]
               }
@@ -33,9 +68,11 @@
           "update": {
               "appliesTo": {
                   "principalTypes": [
-                      "Permguard::IAM"
+                      "Permguard::IAM::User",
+                      "Permguard::IAM::Actor"
                   ],
                   "resourceTypes": [
+                      "BranchInfo",
                       "Branch"
                   ]
               }
@@ -43,9 +80,11 @@
           "delete": {
               "appliesTo": {
                   "principalTypes": [
-                      "Permguard::IAM"
+                      "Permguard::IAM::User",
+                      "Permguard::IAM::Actor"
                   ],
                   "resourceTypes": [
+                      "BranchInfo",
                       "Branch"
                   ]
               }
@@ -53,89 +92,12 @@
           "view": {
               "appliesTo": {
                   "principalTypes": [
-                      "Permguard::IAM"
+                      "Permguard::IAM::User",
+                      "Permguard::IAM::Actor"
                   ],
                   "resourceTypes": [
+                      "BranchInfo",
                       "Branch"
-                  ]
-              }
-          }
-      }
-  },
-  "MagicFarmacia:Branch": {
-      "entityTypes": {
-          "Staff": {
-              "shape": {
-                  "type": "Record",
-                  "attributes": {
-                      "id": "String"
-                  }
-              }
-          },
-          "Inventory": {
-              "shape": {
-                  "type": "Record",
-                  "attributes": {
-                      "id": "String"
-                  }
-              }
-          },
-          "Order": {
-              "shape": {
-                  "type": "Record",
-                  "attributes": {
-                      "id": "String"
-                  }
-              }
-          },
-          "Report": {
-              "shape": {
-                  "type": "Record",
-                  "attributes": {
-                      "id": "String"
-                  }
-              }
-          }
-      },
-      "actions": {
-          "manage": {
-              "appliesTo": {
-                  "principalTypes": [
-                      "Permguard::IAM"
-                  ],
-                  "resourceTypes": [
-                      "Staff",
-                      "Inventory",
-                      "Order",
-                      "Report"
-                  ]
-              }
-          },
-          "assignRole": {
-              "appliesTo": {
-                  "principalTypes": [
-                      "Permguard::IAM"
-                  ],
-                  "resourceTypes": [
-                      "Staff"
-                  ],
-                  "context": {
-                      "attributes": {
-                          "id": "String"
-                      }
-                  }
-              }
-          },
-          "view": {
-              "appliesTo": {
-                  "principalTypes": [
-                      "Permguard::IAM"
-                  ],
-                  "resourceTypes": [
-                      "Staff",
-                      "Inventory",
-                      "Order",
-                      "Report"
                   ]
               }
           }
