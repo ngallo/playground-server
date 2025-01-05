@@ -1,21 +1,39 @@
-@id("view-branch-inventory-auditor")
+@id("platform-administrator")
 permit(
-	principal in Permguard::Actor::"inventory-auditor",
-	action in Action::"view",
-	resource in MagicFarmacia::Branch::Inventory::"*"
-);
-
-// Here the best part;
-@id("assign-role-branch")
-permit(
-	principal in Permguard::Actor::"administer-branches-staff",
-	action in Action::"assignRole",
-	resource in MagicFarmacia::Branch::Staff::"*"
+  principal == Permguard::IAM::Actor::"platform-admin",
+  action in [MagicFarmacia::Platform::Action::"view", MagicFarmacia::Platform::Action::"create", MagicFarmacia::Platform::Action::"update", MagicFarmacia::Platform::Action::"delete"],
+  resource == MagicFarmacia::Platform::BranchInfo::"subscription"
 )
-when {
-	principal.active == true &&
-	context.id > 0
-}
 unless {
-	principal has isTerminated && principal.isTerminated
+  principal has isSuperUser && principal.isSuperUser == false
+};
+
+@id("platform-manager")
+permit(
+  principal == Permguard::IAM::Actor::"platform-manager",
+  action in [MagicFarmacia::Platform::Action::"view", MagicFarmacia::Platform::Action::"update"],
+  resource == MagicFarmacia::Platform::BranchInfo::"subscription"
+)
+unless {
+  principal has isSuperUser && principal.isSuperUser == false
+};
+
+@id("platform-auditor")
+permit(
+  principal == Permguard::IAM::Actor::"platform-auditor",
+  action == MagicFarmacia::Platform::Action::"view",
+  resource == MagicFarmacia::Platform::BranchInfo::"subscription"
+)
+unless {
+  principal has isSuperUser && principal.isSuperUser == false
+};
+
+@id("platform-superuser")
+permit(
+  principal,
+  action == MagicFarmacia::Platform::Action::"view",
+  resource == MagicFarmacia::Platform::BranchInfo::"subscription"
+)
+unless {
+  principal has isSuperUser && principal.isSuperUser == false
 };
