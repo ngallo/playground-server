@@ -18,15 +18,14 @@
         {
           "uid": {
             "type": "Permguard::IAM::User",
-            "id": "amy.smith@acmecorp.com"
+            "id": "platform-admin"
           },
-          "attrs": {
-          },
+          "attrs": {},
           "parents": []
         },
         {
           "uid": {
-            "type": "Magicfarmacia::Platform::BranchInfo",
+            "type": "MagicFarmacia::Platform::BranchInfo",
             "id": "subscription"
           },
           "attrs": {
@@ -44,7 +43,7 @@
     "properties": {}
   },
   "resource": {
-    "type": "Magicfarmacia::Platform::BranchInfo",
+    "type": "MagicFarmacia::Platform::BranchInfo",
     "id": "subscription",
     "properties": {}
   },
