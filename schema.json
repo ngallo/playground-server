@@ -1,119 +1,119 @@
 {
     "Permguard::IAM": {
-        "entityTypes": {
-            "User": {
-                "shape": {
-                    "type": "Record",
-                    "attributes": {}
-                },
-                "memberOfTypes": [
-                    "Identity"
-                ]
-            },
-            "Actor": {
-                "shape": {
-                    "type": "Record",
-                    "attributes": {}
-                },
-                "memberOfTypes": [
-                    "Identity"
-                ]
-            },
-            "Identity": {
-                "shape": {
-                    "type": "Record",
-                    "attributes": {}
-                },
-                "memberOfTypes": []
-            }
+      "entityTypes": {
+        "User": {
+          "shape": {
+            "type": "Record",
+            "attributes": {}
+          },
+          "memberOfTypes": [
+            "Identity"
+          ]
         },
-        "actions": {}
+        "Actor": {
+          "shape": {
+            "type": "Record",
+            "attributes": {}
+          },
+          "memberOfTypes": [
+            "Identity"
+          ]
+        },
+        "Identity": {
+          "shape": {
+            "type": "Record",
+            "attributes": {}
+          },
+          "memberOfTypes": []
+        }
+      },
+      "actions": {}
     },
     "MagicFarmacia::Platform": {
-        "entityTypes": {
-            "Branch": {
-                "shape": {
-                    "type": "Record",
-                    "attributes": {
-                        "city": {
-                            "type": "String"
-                        }
-                    }
-                },
-                "memberOfTypes": [
-                    "BranchInfo"
-                ]
-            },
-            "BranchInfo": {
-                "shape": {
-                    "type": "Record",
-                    "attributes": {
-                        "active": {
-                            "type": "Boolean"
-                        }
-                    }
-                },
-                "memberOfTypes": []
+      "entityTypes": {
+        "Branch": {
+          "shape": {
+            "type": "Record",
+            "attributes": {
+              "city": {
+                "type": "String"
+              }
             }
+          },
+          "memberOfTypes": [
+            "BranchInfo"
+          ]
         },
-        "actions": {
-            "create": {
-                "appliesTo": {
-                    "principalTypes": [
-                        "Permguard::IAM::User",
-                        "Permguard::IAM::Actor"
-                    ],
-                    "resourceTypes": [
-                        "BranchInfo",
-                        "Branch"
-                    ]
-                }
-            },
-            "update": {
-                "appliesTo": {
-                    "principalTypes": [
-                        "Permguard::IAM::User",
-                        "Permguard::IAM::Actor"
-                    ],
-                    "resourceTypes": [
-                        "BranchInfo",
-                        "Branch"
-                    ]
-                }
-            },
-            "delete": {
-                "appliesTo": {
-                    "principalTypes": [
-                        "Permguard::IAM::User",
-                        "Permguard::IAM::Actor"
-                    ],
-                    "resourceTypes": [
-                        "BranchInfo",
-                        "Branch"
-                    ]
-                }
-            },
-            "view": {
-                "appliesTo": {
-                    "principalTypes": [
-                        "Permguard::IAM::User",
-                        "Permguard::IAM::Actor"
-                    ],
-                    "resourceTypes": [
-                        "BranchInfo",
-                        "Branch"
-                    ],
-                    "context": {
-                        "type": "Record",
-                        "attributes": {
-                            "isSuperUser": {
-                                "type": "Boolean",
-                                "required": true
-                            }
-                        }
-                    }
-                }
+        "BranchInfo": {
+          "shape": {
+            "type": "Record",
+            "attributes": {
+              "active": {
+                "type": "Boolean"
+              }
             }
+          },
+          "memberOfTypes": []
         }
+      },
+      "actions": {
+        "create": {
+          "appliesTo": {
+            "principalTypes": [
+              "Permguard::IAM::User",
+              "Permguard::IAM::Actor"
+            ],
+            "resourceTypes": [
+              "BranchInfo",
+              "Branch"
+            ]
+          }
+        },
+        "update": {
+          "appliesTo": {
+            "principalTypes": [
+              "Permguard::IAM::User",
+              "Permguard::IAM::Actor"
+            ],
+            "resourceTypes": [
+              "BranchInfo",
+              "Branch"
+            ]
+          }
+        },
+        "delete": {
+          "appliesTo": {
+            "principalTypes": [
+              "Permguard::IAM::User",
+              "Permguard::IAM::Actor"
+            ],
+            "resourceTypes": [
+              "BranchInfo",
+              "Branch"
+            ]
+          }
+        },
+        "view": {
+          "appliesTo": {
+            "principalTypes": [
+              "Permguard::IAM::User",
+              "Permguard::IAM::Actor"
+            ],
+            "resourceTypes": [
+              "BranchInfo",
+              "Branch"
+            ],
+            "context": {
+              "type": "Record",
+              "attributes": {
+                "isSuperUser": {
+                  "type": "Boolean",
+                  "required": true
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }

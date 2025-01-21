@@ -1,119 +1,49 @@
 {
-  "Permguard::IAM": {
-    "entityTypes": {
-      "User": {
-        "shape": {
-          "type": "Record",
-          "attributes": {}
-        },
-        "memberOfTypes": [
-          "Identity"
-        ]
-      },
-      "Actor": {
-        "shape": {
-          "type": "Record",
-          "attributes": {}
-        },
-        "memberOfTypes": [
-          "Identity"
-        ]
-      },
-      "Identity": {
-        "shape": {
-          "type": "Record",
-          "attributes": {}
-        },
-        "memberOfTypes": []
-      }
+  "authorization_context": {
+    "application_id": 694778299643,
+    "policy_store": {
+      "type": "ledger",
+      "id": "3b72d00fb7d247848757fb37be8d0814"
     },
-    "actions": {}
-  },
-  "MagicFarmacia::Platform": {
-    "entityTypes": {
-      "Branch": {
-        "shape": {
-          "type": "Record",
-          "attributes": {
-            "city": {
-              "type": "String"
-            }
-          }
-        },
-        "memberOfTypes": [
-          "BranchInfo"
-        ]
-      },
-      "BranchInfo": {
-        "shape": {
-          "type": "Record",
-          "attributes": {
-            "active": {
-              "type": "Boolean"
-            }
-          }
-        },
-        "memberOfTypes": []
-      }
+    "principal": {
+      "type": "user",
+      "id": "amy.smith@acmecorp.com",
+      "source": "keycloak",
+      "identity_token": "eyJhbGciOiJI...",
+      "access_token": "eyJhbGciOiJI..."
     },
-    "actions": {
-      "create": {
-        "appliesTo": {
-          "principalTypes": [
-            "Permguard::IAM::User",
-            "Permguard::IAM::Actor"
-          ],
-          "resourceTypes": [
-            "BranchInfo",
-            "Branch"
-          ]
+    "entities": {
+      "schema": "cedar",
+      "items": [
+        {
+          "uid": {
+            "type": "MagicFarmacia::Platform::BranchInfo",
+            "id": "subscription"
+          },
+          "attrs": {
+            "active": true
+          },
+          "parents": []
         }
-      },
-      "update": {
-        "appliesTo": {
-          "principalTypes": [
-            "Permguard::IAM::User",
-            "Permguard::IAM::Actor"
-          ],
-          "resourceTypes": [
-            "BranchInfo",
-            "Branch"
-          ]
-        }
-      },
-      "delete": {
-        "appliesTo": {
-          "principalTypes": [
-            "Permguard::IAM::User",
-            "Permguard::IAM::Actor"
-          ],
-          "resourceTypes": [
-            "BranchInfo",
-            "Branch"
-          ]
-        }
-      },
-      "view": {
-        "appliesTo": {
-          "principalTypes": [
-            "Permguard::IAM::User",
-            "Permguard::IAM::Actor"
-          ],
-          "resourceTypes": [
-            "BranchInfo",
-            "Branch"
-          ],
-          "context": {
-            "type": "Record",
-            "attributes": {
-              "isSuperUser": {
-                "type": "Boolean",
-                "required": true
-              }
-            }
-          }
-        }
-      }
+      ]
     }
+  },
+  "subject": {
+    "type": "user",
+    "id": "amy.smith@acmecorp.com",
+    "source": "keycloak",
+    "properties": {}
+  },
+  "resource": {
+    "type": "MagicFarmacia::Platform::BranchInfo",
+    "id": "subscription",
+    "properties": {}
+  },
+  "action": {
+    "name": "MagicFarmacia::Platform::Action::create",
+    "properties": {}
+  },
+  "context": {
+    "isSuperUser": true
   }
 }
