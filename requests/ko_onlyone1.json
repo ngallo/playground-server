@@ -32,7 +32,9 @@
     "type": "user",
     "id": "amy.smith@acmecorp.com",
     "source": "keycloak",
-    "properties": {}
+    "properties": {
+      "isSuperUser": true
+    }
   },
   "resource": {
     "type": "MagicFarmacia::Platform::BranchInfo",
