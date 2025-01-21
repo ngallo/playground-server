@@ -34,6 +34,9 @@ permit(
   action == MagicFarmacia::Platform::Action::"create",
   resource == MagicFarmacia::Platform::BranchInfo::"subscription"
 )
+when {
+  context.demoRequest == true
+}
 unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
