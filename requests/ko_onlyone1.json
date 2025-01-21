@@ -1,9 +1,9 @@
 {
   "authorization_context": {
-    "application_id": 954351996827,
+    "application_id": 694778299643,
     "policy_store": {
       "type": "ledger",
-      "id": "37469e949b2c4b93963e00665b2015f8"
+      "id": "3b72d00fb7d247848757fb37be8d0814"
     },
     "principal": {
       "type": "user",
@@ -15,6 +15,11 @@
     "entities": {
       "schema": "cedar",
       "items": [
+        {
+          "uid": { "type": "Permguard::IAM::User", "id": "amy.smith@acmecorp.com" },
+          "attrs": { "isSuperUser": true },
+          "parents": []
+        },
         {
           "uid": {
             "type": "MagicFarmacia::Platform::BranchInfo",
@@ -32,9 +37,7 @@
     "type": "user",
     "id": "amy.smith@acmecorp.com",
     "source": "keycloak",
-    "properties": {
-      "isSuperUser": true
-    }
+    "properties": {}
   },
   "resource": {
     "type": "MagicFarmacia::Platform::BranchInfo",
