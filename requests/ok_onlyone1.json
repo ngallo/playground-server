@@ -17,7 +17,7 @@
       "items": [
         {
           "uid": { "type": "Permguard::IAM::User", "id": "amy.smith@acmecorp.com" },
-          "attrs": { "isSuperUser": true },
+          "attrs": { "isSuperUser": false },
           "parents": []
         },
         {
