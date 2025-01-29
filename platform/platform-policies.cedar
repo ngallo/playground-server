@@ -28,16 +28,6 @@ unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
 
-@id("amy.smith")
-permit(
-  principal in Permguard::IAM::User::"amy.smith@acmecorp.com",
-  action == MagicFarmacia::Platform::Action::"create",
-  resource == MagicFarmacia::Platform::Subscription::"e3a786fd07e24bfa95ba4341d3695ae8"
-)
-unless {
-  principal has isSuperUser && principal.isSuperUser == true
-};
-
 @id("platform-superuser")
 permit(
   principal,
@@ -47,3 +37,10 @@ permit(
 unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
+
+@id("citizen-doc-submit-actor")
+permit(
+ principal in Permguard::IAM::Actor::"citizen-doc-submit-actor",
+ action == Municipality::Document::Action::"can_submit",
+ resource
+);
