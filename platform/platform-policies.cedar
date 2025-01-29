@@ -38,9 +38,13 @@ unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
 
-@id("citizen-doc-submit-actor")
+@id("can-create-any")
 permit(
- principal in Permguard::IAM::Actor::"citizen-doc-submit-actor",
- action == Municipality::Document::Action::"can_submit",
- resource
-);
+ principal,
+  action == MagicFarmacia::Platform::Action::"create",
+  resource
+)
+unless {
+  principal has isSuperUser && principal.isSuperUser == false
+};
+

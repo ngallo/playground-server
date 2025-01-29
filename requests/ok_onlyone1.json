@@ -1,9 +1,9 @@
 {
   "authorization_context": {
-    "zone_id": 694778299643,
+    "zone_id": 345521798799,
     "policy_store": {
       "type": "ledger",
-      "id": "3b72d00fb7d247848757fb37be8d0814"
+      "id": "4652d67706024605a1ccd87bce1fe8a7"
     },
     "principal": {
       "type": "user",
@@ -17,7 +17,7 @@
       "items": [
         {
           "uid": { "type": "Permguard::IAM::User", "id": "amy.smith@acmecorp.com" },
-          "attrs": { "isSuperUser": false },
+          "attrs": { "isSuperUser": true },
           "parents": []
         },
         {
