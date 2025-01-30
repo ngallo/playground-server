@@ -1,9 +1,9 @@
 {
   "authorization_context": {
-    "zone_id": 345521798799,
+    "zone_id": 984244837982,
     "policy_store": {
       "type": "ledger",
-      "id": "4652d67706024605a1ccd87bce1fe8a7"
+      "id": "423038f424f74ccfa4cd6790e4364e3f"
     },
     "principal": {
       "type": "user",
