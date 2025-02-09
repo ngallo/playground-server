@@ -28,7 +28,7 @@ unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
 
-@id("platform-superuser")
+@id("anyone-read")
 permit(
   principal,
   action == MagicFarmacia::Platform::Action::"view",
@@ -38,7 +38,7 @@ unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
 
-@id("can-create-any")
+@id("platform-creator")
 permit(
   principal in Permguard::IAM::Actor::"platform-creator",
   action == MagicFarmacia::Platform::Action::"create",
