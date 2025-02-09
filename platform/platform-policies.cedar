@@ -40,7 +40,7 @@ unless {
 
 @id("can-create-any")
 permit(
- principal,
+  principal in Permguard::IAM::Actor::"platform-creator",
   action == MagicFarmacia::Platform::Action::"create",
   resource
 )
