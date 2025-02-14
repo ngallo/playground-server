@@ -1,5 +1,5 @@
 {
-  "authorization_context": {
+  "authorization_model": {
     "zone_id": 395517830115,
     "policy_store": {
       "type": "ledger",
