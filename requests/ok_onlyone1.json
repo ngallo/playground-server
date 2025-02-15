@@ -47,6 +47,6 @@
   },
   "context": {
     "time": "2025-01-23T16:17:46+00:00",
-    "subscriptionActive": true
+    "isSubscriptionActive": true
   }
 }
