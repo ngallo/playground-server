@@ -28,7 +28,7 @@ unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
 
-@id("anyone-read")
+@id("platform-view")
 permit(
   principal,
   action == MagicFarmacia::Platform::Action::"view",
@@ -44,6 +44,9 @@ permit(
   action == MagicFarmacia::Platform::Action::"create",
   resource
 )
+when { 
+  context.isOk == true
+}
 unless {
   principal has isSuperUser && principal.isSuperUser == false
 };

@@ -16,11 +16,6 @@
       "schema": "cedar",
       "items": [
         {
-          "uid": { "type": "Permguard::IAM::User", "id": "amy.smith@acmecorp.com" },
-          "attrs": { "isSuperUser": true },
-          "parents": []
-        },
-        {
           "uid": {
             "type": "MagicFarmacia::Platform::BranchInfo",
             "id": "subscription"
@@ -51,6 +46,7 @@
     "properties": {}
   },
   "context": {
-    "time": "2025-01-23T16:17:46+00:00"
+    "time": "2025-01-23T16:17:46+00:00",
+    "isOk": true
   }
 }
