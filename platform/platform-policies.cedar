@@ -45,9 +45,9 @@ permit(
   resource
 )
 when { 
-  context.isOk == true
+  context.subscriptionActive == true
 }
 unless {
-  principal has isSuperUser && principal.isSuperUser == false
+  principal.isSuperUser == false
 };
 
