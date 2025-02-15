@@ -41,7 +41,9 @@
   },
   "action": {
     "name": "MagicFarmacia::Platform::Action::create",
-    "properties": {}
+    "properties": {
+      "isEnabled": true
+    }
   },
   "context": {
     "time": "2025-01-23T16:17:46+00:00",
