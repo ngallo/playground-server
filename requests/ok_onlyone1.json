@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 204510383118,
+    "zone_id": 979783680014,
     "policy_store": {
       "type": "ledger",
-      "id": "181e252e247747338ad062abad0086a5"
+      "id": "ce5b5ec4eed64d0c906f08b69a22ee7b"
     },
     "principal": {
       "type": "user",
@@ -39,7 +39,7 @@
     "type": "MagicFarmacia::Platform::Subscription",
     "id": "e3a786fd07e24bfa95ba4341d3695ae8",
     "properties": {
-      "isEnabled": true
+      "isEnabled": false
     }
   },
   "action": {
