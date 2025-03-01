@@ -35,21 +35,40 @@
       "isSuperUser": true
     }
   },
-  "resource": {
-    "type": "MagicFarmacia::Platform::Subscription",
-    "id": "e3a786fd07e24bfa95ba4341d3695ae8",
-    "properties": {
-      "isEnabled": true
-    }
-  },
-  "action": {
-    "name": "MagicFarmacia::Platform::Action::create",
-    "properties": {
-      "isEnabled": true
-    }
-  },
   "context": {
     "time": "2025-01-23T16:17:46+00:00",
     "isSubscriptionActive": false
-  }
+  },
+  "evaluations": [
+    {
+      "resource": {
+        "type": "MagicFarmacia::Platform::Subscription",
+        "id": "e3a786fd07e24bfa95ba4341d3695ae8",
+        "properties": {
+          "isEnabled": true
+        }
+      },
+      "action": {
+        "name": "MagicFarmacia::Platform::Action::create",
+        "properties": {
+          "isEnabled": true
+        }
+      }
+    },
+    {
+      "resource": {
+        "type": "MagicFarmacia::Platform::Subscription",
+        "id": "e3a786fd07e24bfa95ba4341d3695ae8",
+        "properties": {
+          "isEnabled": false
+        }
+      },
+      "action": {
+        "name": "MagicFarmacia::Platform::Action::create",
+        "properties": {
+          "isEnabled": true
+        }
+      }
+    }
+  ]
 }
