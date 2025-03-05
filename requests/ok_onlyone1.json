@@ -28,8 +28,8 @@
   },
   "request_id": "abc1",
   "subject": {
-    "type": "user",
-    "id": "amy.smith@acmecorp.com",
+    "type": "actor",
+    "id": "platform-admin",
     "source": "keycloak",
     "properties": {
       "isSuperUser": true
