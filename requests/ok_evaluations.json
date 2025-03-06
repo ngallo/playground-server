@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 204510383118,
+    "zone_id": 895741663247,
     "policy_store": {
       "type": "ledger",
-      "id": "181e252e247747338ad062abad0086a5"
+      "id": "809257ed202e40cab7e958218eecad20"
     },
     "principal": {
       "type": "user",
@@ -27,8 +27,8 @@
     }
   },
   "subject": {
-    "type": "user",
-    "id": "amy.smith@acmecorp.com",
+    "type": "role-actor",
+    "id": "platform-creator",
     "source": "keycloak",
     "properties": {
       "isSuperUser": true
@@ -36,7 +36,7 @@
   },
   "context": {
     "time": "2025-01-23T16:17:46+00:00",
-    "isSubscriptionActive": false
+    "isSubscriptionActive": true
   },
   "evaluations": [
     {
@@ -61,7 +61,7 @@
         "type": "MagicFarmacia::Platform::Subscription",
         "id": "e3a786fd07e24bfa95ba4341d3695ae8",
         "properties": {
-          "isEnabled": false
+          "isEnabled": true
         }
       },
       "action": {
