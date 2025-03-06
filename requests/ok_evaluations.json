@@ -26,6 +26,7 @@
       ]
     }
   },
+  "request_id": "abc1",
   "subject": {
     "type": "role-actor",
     "id": "platform-creator",
@@ -40,7 +41,7 @@
   },
   "evaluations": [
     {
-      "request_id": "abc1",
+      "request_id": "exz1",
       "resource": {
         "type": "MagicFarmacia::Platform::Subscription",
         "id": "e3a786fd07e24bfa95ba4341d3695ae8",
@@ -56,7 +57,7 @@
       }
     },
     {
-      "request_id": "abc1",
+      "request_id": "exz2",
       "resource": {
         "type": "MagicFarmacia::Platform::Subscription",
         "id": "e3a786fd07e24bfa95ba4341d3695ae8",
@@ -67,7 +68,7 @@
       "action": {
         "name": "MagicFarmacia::Platform::Action::create",
         "properties": {
-          "isEnabled": true
+          "isEnabled": false
         }
       }
     }
