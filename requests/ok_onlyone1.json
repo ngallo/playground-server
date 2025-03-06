@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 979783680014,
+    "zone_id": 633687665465,
     "policy_store": {
       "type": "ledger",
-      "id": "ce5b5ec4eed64d0c906f08b69a22ee7b"
+      "id": "fc260e783b0c4bd6aa88eed18f57aab3"
     },
     "principal": {
       "type": "user",
@@ -28,8 +28,8 @@
   },
   "request_id": "abc1",
   "subject": {
-    "type": "actor",
-    "id": "platform-admin",
+    "type": "role-actor",
+    "id": "platform-creator",
     "source": "keycloak",
     "properties": {
       "isSuperUser": true
@@ -50,6 +50,6 @@
   },
   "context": {
     "time": "2025-01-23T16:17:46+00:00",
-    "isSubscriptionActive": false
+    "isSubscriptionActive": true
   }
 }
