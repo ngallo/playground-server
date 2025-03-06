@@ -29,7 +29,7 @@
   "request_id": "abc1",
   "subject": {
     "type": "role-actor",
-    "id": "platform-admin",
+    "id": "platform-creator",
     "source": "keycloak",
     "properties": {
       "isSuperUser": true
@@ -50,6 +50,6 @@
   },
   "context": {
     "time": "2025-01-23T16:17:46+00:00",
-    "isSubscriptionActive": false
+    "isSubscriptionActive": true
   }
 }
