@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 979783680014,
+    "zone_id": 633687665465,
     "policy_store": {
       "type": "ledger",
-      "id": "ce5b5ec4eed64d0c906f08b69a22ee7b"
+      "id": "fc260e783b0c4bd6aa88eed18f57aab3"
     },
     "principal": {
       "type": "user",
