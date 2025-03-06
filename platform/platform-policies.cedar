@@ -1,6 +1,6 @@
 @id("platform-administrator")
 permit(
-  principal in Permguard::IAM::RoleActor::"platform-admin",
+  principal == Permguard::IAM::RoleActor::"platform-admin",
   action in [ MagicFarmacia::Platform::Action::"view", MagicFarmacia::Platform::Action::"create", 
     MagicFarmacia::Platform::Action::"update", MagicFarmacia::Platform::Action::"delete"],
   resource is MagicFarmacia::Platform::Subscription
@@ -11,7 +11,7 @@ unless {
 
 @id("platform-manager")
 permit(
-  principal in Permguard::IAM::RoleActor::"platform-manager",
+  principal == Permguard::IAM::RoleActor::"platform-manager",
   action in [MagicFarmacia::Platform::Action::"view", MagicFarmacia::Platform::Action::"update"],
   resource is MagicFarmacia::Platform::Subscription
 )
@@ -21,7 +21,7 @@ unless {
 
 @id("platform-auditor")
 permit(
-  principal in Permguard::IAM::RoleActor::"platform-auditor",
+  principal == Permguard::IAM::RoleActor::"platform-auditor",
   action == MagicFarmacia::Platform::Action::"view",
   resource is MagicFarmacia::Platform::Subscription
 )
@@ -31,7 +31,7 @@ unless {
 
 @id("platform-viewer")
 permit(
-  principal in Permguard::IAM::RoleActor::"platform-viewer",
+  principal == Permguard::IAM::RoleActor::"platform-viewer",
   action == MagicFarmacia::Platform::Action::"view",
   resource is MagicFarmacia::Platform::Subscription
 )
@@ -41,7 +41,7 @@ unless {
 
 @id("platform-creator")
 permit(
-  principal,
+  principal == Permguard::IAM::RoleActor::"platform-creator",
   action == MagicFarmacia::Platform::Action::"create",
   resource is MagicFarmacia::Platform::Subscription
 )
