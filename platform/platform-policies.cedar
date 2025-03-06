@@ -42,7 +42,7 @@ unless {
 permit(
   principal,
   action == MagicFarmacia::Platform::Action::"create",
-  resource in MagicFarmacia::Platform::Subscription::"e3a786fd07e24bfa95ba4341d3695ae8"
+  resource
 )
 when { 
   context.isSubscriptionActive == true && action.isEnabled == true && resource.isEnabled == true
