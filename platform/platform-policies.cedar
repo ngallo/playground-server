@@ -1,7 +1,8 @@
 @id("platform-administrator")
 permit(
   principal in Permguard::IAM::RoleActor::"platform-admin",
-  action in [MagicFarmacia::Platform::Action::"view", MagicFarmacia::Platform::Action::"create", MagicFarmacia::Platform::Action::"update", MagicFarmacia::Platform::Action::"delete"],
+  action in [ MagicFarmacia::Platform::Action::"view", MagicFarmacia::Platform::Action::"create", 
+    MagicFarmacia::Platform::Action::"update", MagicFarmacia::Platform::Action::"delete"],
   resource is MagicFarmacia::Platform::Subscription
 )
 unless {
