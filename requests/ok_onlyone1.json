@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 633687665465,
+    "zone_id": 895741663247,
     "policy_store": {
       "type": "ledger",
-      "id": "fc260e783b0c4bd6aa88eed18f57aab3"
+      "id": "809257ed202e40cab7e958218eecad20"
     },
     "principal": {
       "type": "user",
@@ -28,7 +28,7 @@
   },
   "request_id": "abc1",
   "subject": {
-    "type": "role-actor",
+    "type": "permguard:role-actor",
     "id": "platform-creator",
     "source": "keycloak",
     "properties": {
