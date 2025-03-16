@@ -1,7 +1,7 @@
 {
     "metadata": {
         "name": "playground-cedar",
-        "description": "A Permguard playground using the Cedar langauge.",
+        "description": "A Permguard playground using the Cedar language.",
         "author": "Nitro Agility S.r.l.",
         "license": "Apache-2.0"
     },
