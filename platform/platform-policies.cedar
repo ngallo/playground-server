@@ -42,7 +42,7 @@ unless {
 @id("platform-creator")
 permit(
   principal == Permguard::IAM::RoleActor::"platform-creator",
-  action == MagicFarmacia::Platform::Action::"create",
+  action == MagicFarmacia::Platform::Action::"create1",
   resource is MagicFarmacia::Platform::Subscription
 )
 when { 

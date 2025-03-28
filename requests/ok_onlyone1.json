@@ -43,7 +43,7 @@
     }
   },
   "action": {
-    "name": "MagicFarmacia::Platform::Action::create",
+    "name": "MagicFarmacia::Platform::Action::create1",
     "properties": {
       "isEnabled": true
     }
