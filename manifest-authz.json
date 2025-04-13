@@ -1,0 +1,27 @@
+{
+    "metadata": {
+        "name": "playground-cedar",
+        "description": "A Permguard playground using the Cedar language.",
+        "author": "Nitro Agility S.r.l.",
+        "license": "Apache-2.0"
+    },
+    "runtimes": {
+        "cedar0.0+": {
+            "language": {
+                "name": "cedar",
+                "version": "0.0+"
+            },
+            "engine": {
+                "name": "permguard",
+                "version": "0.0+",
+                "distribution": "community"
+            }
+        }
+    },
+    "partitions": {
+        "root": {
+            "runtime": "cedar0.0+",
+            "schema": false
+        }
+    }
+}
