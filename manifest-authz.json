@@ -19,7 +19,7 @@
         }
     },
     "partitions": {
-        "root": {
+        "/": {
             "runtime": "cedar0.0+",
             "schema": false
         }
