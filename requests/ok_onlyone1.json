@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 978473417680,
+    "zone_id": 200365974321,
     "policy_store": {
       "kind": "ledger",
-      "id": "2ecd17f3fe7a4d30999a93d4928549b5"
+      "id": "89be7cf6c29142dba6a301cf47b98d1c"
     },
     "principal": {
       "type": "user",
@@ -43,7 +43,7 @@
     }
   },
   "action": {
-    "name": "MagicFarmacia::Platform::Action::create1",
+    "name": "MagicFarmacia::Platform::Action::create",
     "properties": {
       "isEnabled": true
     }
