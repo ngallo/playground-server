@@ -1,3 +1,3 @@
-# Permguard Cedar Policy Language Playground
+# Permguard AuthZ Server Playground
 
-A sandbox environment for exploring and testing policies with the Cedar Policy Language in Permguard.
+A sandbox environment for exploring and testing the Permguard AuthZ Server.
