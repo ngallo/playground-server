@@ -7,7 +7,7 @@
     "license": ""
   },
   "runtimes": {
-    "cedar0.0+": {
+    "cedar[0.0+]": {
       "language": {
         "name": "cedar",
         "version": "0.0+"
@@ -21,7 +21,7 @@
   },
   "partitions": {
     "/": {
-      "runtime": "cedar0.0+",
+      "runtime": "cedar[0.0+]",
       "schema": false
     }
   }
