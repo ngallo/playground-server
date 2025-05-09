@@ -9,7 +9,7 @@ unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
 
-@id("platform-manager2")
+@id("platform-manager")
 permit(
   principal == Permguard::IAM::RoleActor::"platform-manager",
   action in [MagicFarmacia::Platform::Action::"view", MagicFarmacia::Platform::Action::"update"],
