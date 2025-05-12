@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 572140840284,
+    "zone_id": 209743917996,
     "policy_store": {
       "kind": "ledger",
-      "id": "f2402ef42c6f4bbca524306bd546d350"
+      "id": "8a0f7f22ac3f4255921322f691bc2bd5"
     },
     "principal": {
       "type": "user",
