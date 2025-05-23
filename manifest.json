@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "name": "356e760ba15447c68eaba68211b41ed1",
+    "description": "",
+    "author": "",
+    "license": ""
+  },
+  "runtimes": {
+    "cedar[0.0+]": {
+      "language": {
+        "name": "cedar",
+        "version": "0.0+"
+      },
+      "engine": {
+        "name": "permguard",
+        "version": "0.0+",
+        "distribution": "community"
+      }
+    }
+  },
+  "partitions": {
+    "/": {
+      "runtime": "cedar[0.0+]",
+      "schema": false
+    }
+  }
+}

@@ -20,7 +20,7 @@ unless {
 };
 
 @id("platform-auditor")
-permit1(
+permit(
   principal == Permguard::IAM::RoleActor::"platform-auditor",
   action == MagicFarmacia::Platform::Action::"view",
   resource is MagicFarmacia::Platform::Subscription
