@@ -1,9 +1,9 @@
 {
   "authorization_model": {
-    "zone_id": 694713277185,
+    "zone_id": 772445965481,
     "policy_store": {
       "kind": "ledger",
-      "id": "2d2bcfc6cf7d432ba56f2a1a9a951858"
+      "id": "adc22b99507d41adaeaa1e0d32649c4f"
     },
     "principal": {
       "type": "user",
@@ -29,7 +29,7 @@
   "request_id": "abc1",
   "subject": {
     "type": "role-actor",
-    "id": "platform-creator",
+    "id": "platform-executor",
     "source": "keycloak",
     "properties": {
       "isSuperUser": true
@@ -43,7 +43,7 @@
     }
   },
   "action": {
-    "name": "MagicFarmacia::Platform::Action::create1",
+    "name": "MagicFarmacia::Platform::Action::create",
     "properties": {
       "isEnabled": true
     }

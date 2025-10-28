@@ -39,9 +39,9 @@ unless {
   principal has isSuperUser && principal.isSuperUser == false
 };
 
-@id("platform-creator")
+@id("platform-executor")
 permit(
-  principal == Permguard::IAM::RoleActor::"platform-creator",
+  principal == Permguard::IAM::RoleActor::"platform-executor",
   action == MagicFarmacia::Platform::Action::"create",
   resource is MagicFarmacia::Platform::Subscription
 )
