@@ -1,5 +1,5 @@
 {
-    "Permguard::IAM": {
+    "Permguard::Identity": {
       "entityTypes": {
         "User": {
           "shape": {
@@ -60,8 +60,9 @@
         "create": {
           "appliesTo": {
             "principalTypes": [
-              "Permguard::IAM::User",
-              "Permguard::IAM::User"
+              "Permguard::Identity::User",
+              "Permguard::Identity::Workload",
+              "Permguard::Identity::Attribute"
             ],
             "resourceTypes": [
               "Account",
@@ -72,8 +73,9 @@
         "update": {
           "appliesTo": {
             "principalTypes": [
-              "Permguard::IAM::User",
-              "Permguard::IAM::User"
+              "Permguard::Identity::User",
+              "Permguard::Identity::Workload",
+              "Permguard::Identity::Attribute"
             ],
             "resourceTypes": [
               "Account",
@@ -84,8 +86,9 @@
         "delete": {
           "appliesTo": {
             "principalTypes": [
-              "Permguard::IAM::User",
-              "Permguard::IAM::User"
+              "Permguard::Identity::User",
+              "Permguard::Identity::Workload",
+              "Permguard::Identity::Attribute"
             ],
             "resourceTypes": [
               "Account",
@@ -96,8 +99,9 @@
         "view": {
           "appliesTo": {
             "principalTypes": [
-              "Permguard::IAM::User",
-              "Permguard::IAM::User"
+              "Permguard::Identity::User",
+              "Permguard::Identity::Workload",
+              "Permguard::Identity::Attribute"
             ],
             "resourceTypes": [
               "Account",
