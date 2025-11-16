@@ -29,7 +29,7 @@
       },
       "actions": {}
     },
-    "MagicFarmacia::Platform": {
+    "ZTMedFlow::Platform": {
       "entityTypes": {
         "Branch": {
           "shape": {
