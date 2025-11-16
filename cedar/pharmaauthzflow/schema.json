@@ -29,7 +29,7 @@
       },
       "actions": {}
     },
-    "ZTMedFlow::Platform": {
+    "PharmaAuthZFlow::Platform": {
       "entityTypes": {
         "Branch": {
           "shape": {

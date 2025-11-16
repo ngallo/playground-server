@@ -1,9 +1,9 @@
 @id("platform-administrator")
 permit(
   principal == Permguard::Identity::Attribute::"role/platform-admin",
-  action in [ ZTMedFlow::Platform::Action::"view", ZTMedFlow::Platform::Action::"create", 
-    ZTMedFlow::Platform::Action::"update", ZTMedFlow::Platform::Action::"delete"],
-  resource is ZTMedFlow::Platform::Subscription
+  action in [ PharmaAuthZFlow::Platform::Action::"view", PharmaAuthZFlow::Platform::Action::"create", 
+    PharmaAuthZFlow::Platform::Action::"update", PharmaAuthZFlow::Platform::Action::"delete"],
+  resource is PharmaAuthZFlow::Platform::Subscription
 )
 unless {
   principal has isSuperUser && principal.isSuperUser == false
@@ -12,8 +12,8 @@ unless {
 @id("platform-manager")
 permit(
   principal == Permguard::Identity::Attribute::"role/platform-manager",
-  action in [ZTMedFlow::Platform::Action::"view", ZTMedFlow::Platform::Action::"update"],
-  resource is ZTMedFlow::Platform::Subscription
+  action in [PharmaAuthZFlow::Platform::Action::"view", PharmaAuthZFlow::Platform::Action::"update"],
+  resource is PharmaAuthZFlow::Platform::Subscription
 )
 unless {
   principal has isSuperUser && principal.isSuperUser == false
@@ -22,8 +22,8 @@ unless {
 @id("platform-auditor")
 permit(
   principal == Permguard::Identity::Attribute::"role/platform-auditor",
-  action == ZTMedFlow::Platform::Action::"view",
-  resource is ZTMedFlow::Platform::Subscription
+  action == PharmaAuthZFlow::Platform::Action::"view",
+  resource is PharmaAuthZFlow::Platform::Subscription
 )
 unless {
   principal has isSuperUser && principal.isSuperUser == false
@@ -32,8 +32,8 @@ unless {
 @id("platform-viewer")
 permit(
   principal == Permguard::Identity::Attribute::"role/platform-viewer",
-  action == ZTMedFlow::Platform::Action::"view",
-  resource is ZTMedFlow::Platform::Subscription
+  action == PharmaAuthZFlow::Platform::Action::"view",
+  resource is PharmaAuthZFlow::Platform::Subscription
 )
 unless {
   principal has isSuperUser && principal.isSuperUser == false
@@ -42,8 +42,8 @@ unless {
 @id("platform-executor")
 permit(
   principal == Permguard::Identity::Attribute::"role/platform-executor",
-  action == ZTMedFlow::Platform::Action::"create",
-  resource is ZTMedFlow::Platform::Subscription
+  action == PharmaAuthZFlow::Platform::Action::"create",
+  resource is PharmaAuthZFlow::Platform::Subscription
 )
 when { 
   context.isSubscriptionActive == true && action.isEnabled == true && resource.isEnabled == true
