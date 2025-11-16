@@ -61,7 +61,7 @@
           "appliesTo": {
             "principalTypes": [
               "Permguard::IAM::User",
-              "Permguard::IAM::Actor"
+              "Permguard::IAM::User"
             ],
             "resourceTypes": [
               "Account",
@@ -73,7 +73,7 @@
           "appliesTo": {
             "principalTypes": [
               "Permguard::IAM::User",
-              "Permguard::IAM::Actor"
+              "Permguard::IAM::User"
             ],
             "resourceTypes": [
               "Account",
@@ -85,7 +85,7 @@
           "appliesTo": {
             "principalTypes": [
               "Permguard::IAM::User",
-              "Permguard::IAM::Actor"
+              "Permguard::IAM::User"
             ],
             "resourceTypes": [
               "Account",
@@ -97,7 +97,7 @@
           "appliesTo": {
             "principalTypes": [
               "Permguard::IAM::User",
-              "Permguard::IAM::Actor"
+              "Permguard::IAM::User"
             ],
             "resourceTypes": [
               "Account",
