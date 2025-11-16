@@ -1,3 +1,3 @@
-# Permguard AuthZ Server Playground
+# Permguard AuthZServer Playground
 
-A sandbox environment for exploring and testing the Permguard AuthZ Server.
+A sandbox environment for exploring and testing the Permguard AuthZServer.
