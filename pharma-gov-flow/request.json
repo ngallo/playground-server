@@ -1,0 +1,26 @@
+{
+  "authorization_model": {
+    "zone_id": 763215517852,
+    "policy_store": {
+      "kind": "ledger",
+      "id": "228fc16685614e99aeb84ad74ffdf315"
+    },
+    "principal": {
+      "type": "workload",
+      "id": "spiffe://edge.example.com/workload/64ad91fec7b0403eaf5d37e56c14ba42",
+      "source": "spire"
+    }
+  },
+  "request_id": "1f12378d138e4c75b70d7cfa32345d39",
+  "subject": {
+    "type": "attribute",
+    "id": "role/branch-owner"
+  },
+  "resource": {
+    "type": "PharmaGovFlow::Platform::Branch",
+    "id": "fb008a600df04b21841c4fb5ad27ddf7"
+  },
+  "action": {
+    "name": "PharmaGovFlow::Platform::Action::assign-role"
+  }
+}

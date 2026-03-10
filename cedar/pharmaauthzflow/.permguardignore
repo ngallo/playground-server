@@ -1,4 +1,0 @@
-# permguard ignore file
-requests
-!platform/**
-pharmacy-branch/branch-policies.cedar
